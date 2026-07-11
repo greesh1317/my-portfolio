@@ -34,14 +34,14 @@ function Heroo(){
             animate="visible"
         >
             <motion.p variants={itemVariantes}>
-                <b>Hello I'm Greeshma Divya Sree</b>
+                Hello I'm Greeshma Divya Sree - Full Stack Developer
             </motion.p>
             <motion.h1 variants={itemVariantes}>
                  Curious mind. Creative imagination.<br />
                  Continuous learner, Building modern web experiences one idea at a time
             </motion.h1>
             <motion.p variants={itemVariantes}> 
-                <b>Full Stack Developer</b>
+                <b>CSE student. MERN certified. Creative by instinct.</b>
             </motion.p>
             <motion.button
                 style={{width: "fit-content"}}
