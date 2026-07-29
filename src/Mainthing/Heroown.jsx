@@ -18,7 +18,7 @@ const itemVariantes={
     },
 }
 
-function Heroo(){
+function Heroo({onSeeWork}){
     return(
         <motion.section
             variants={containerVariants}
@@ -58,8 +58,9 @@ function Heroo(){
                     rotate:0,
                     scale:0.7,
                 }}*/
-                whileHover={{scale:1.1, background:"red"}}
+                whileHover={{scale:1.1}}
                 whileTap={{scale:0.8}}
+                onClick={onSeeWork}
             > 
                  see my work
             </motion.button>

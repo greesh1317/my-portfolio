@@ -4,8 +4,14 @@
 //import Transd from "./practice/Trans";
 //import Vari from "./practice/Varient";
 //import Segg  from "./practice/Stagger";
-//import Hero from "./HeroSection/Hero";
-import Heroo from "./HeroSection/Heroown";
+//import ScrollInView from "./practice/2/ScrollInView";
+//import ScrollTransform from "./practice/2/ScrollTransform";
+//import ParallaxSection from "./practice/2/Parallax";
+import {useRef} from "react";
+import Project from "./Mainthing/Projectcard";
+import Heroo from "./Mainthing/Heroown";
+import Me from "./Mainthing/About";
+import Projects from "./Mainthing/Projects";
 function App() {
   /*return (
     <motion.div
@@ -16,12 +22,34 @@ function App() {
       <h1>Hello, I'm Nyra 👋</h1>
     </motion.div>
   ); for animation*/
+  
+  const projectRef = useRef(null);
+  const scrollToProjects = () => {
+    projectRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return(
       //<Hover /> 
       //<Transd />
       //< Vari />
       //<Segg />
-      <Heroo />
+      
+      //<ScrollInView />
+      //<ScrollTransform />
+      //<ParallaxSection />
+
+      // all for Project cards
+      
+      <>
+        <Heroo onSeeWork={scrollToProjects} />
+
+        <div ref={projectRef}>
+          <Projects />
+        </div>
+
+        <Me />
+      </> 
   );
 }
 
