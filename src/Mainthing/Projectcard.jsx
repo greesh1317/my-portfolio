@@ -1,4 +1,5 @@
 import { easeOut, motion } from "framer-motion";
+import { Style } from "./Styles";
 
 const item = {
   hidden: { opacity: 0, y: 40 },
@@ -16,10 +17,12 @@ function Project(props) {
   return (
     <motion.div
       style={{
-        padding: "20px",
+        //padding: "20px",
         borderRadius: "15px",
         marginBottom: "20px",
         boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+        padding: "2rem"
+        //...Style,
       }}
       variants={item}
       initial="hidden"
@@ -30,7 +33,7 @@ function Project(props) {
       <h3 className="text-2xl font-bold">
         {props.title}
       </h3>
-
+      
       <p className="mt-2 text-gray-300">
         {props.description}
       </p>

@@ -1,4 +1,5 @@
 import {motion} from "framer-motion";
+import { Style } from "./Styles";
 const containerVariants={
     hidden:{},
     visible:{
@@ -28,7 +29,9 @@ function Heroo({onSeeWork}){
                         display:"flex",
                         flexDirection:"column",
                         justifyContent:"center",
-                        padding:"0 5%"
+                        //padding: "2rem",
+                        ...Style,
+                        gap: "24px",
                     }}
             initial="hidden"
             animate="visible"
@@ -44,7 +47,19 @@ function Heroo({onSeeWork}){
                 <b>CSE student. MERN certified. Creative by instinct.</b>
             </motion.p>
             <motion.button
-                style={{width: "fit-content"}}
+                style={{
+                    width: "fit-content",
+                padding: "12px 24px",
+                //...Style,
+                border: "2px solid #111",
+                borderRadius: "8px",
+                background: "#111",//"transparent"
+                color: "#fff",//"#111"
+                fontFamily: "inherit",
+                fontSize: "1rem",
+                fontWeight: "600",
+                cursor: "pointer",
+                }}
                 variants={itemVariantes}
                 /*initial={{
                     opacity:0,
@@ -58,8 +73,8 @@ function Heroo({onSeeWork}){
                     rotate:0,
                     scale:0.7,
                 }}*/
-                whileHover={{scale:1.1}}
-                whileTap={{scale:0.8}}
+                whileHover={{scale:1.01}}
+                whileTap={{scale:0.95}}
                 onClick={onSeeWork}
             > 
                  see my work

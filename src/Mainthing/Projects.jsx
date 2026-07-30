@@ -1,17 +1,23 @@
 import Project from "./Projectcard";
+import { Style } from "./Styles";
+
 
 function Projects() {
   return (
     <section
         style={{
             minHeight: "100vh",
-            padding: "0 5%",
+            ...Style,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
         }}
     >
-      <h2>My Projects</h2>
+      <h2
+        style={{
+          marginBottom: "32px",
+        }}
+      >My Projects</h2>
 
       <Project
         title="Portfolio Website"

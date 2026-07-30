@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-
+import { Style } from "./Styles";
 const skills = [
   "React",
   "Tailwind CSS",
@@ -14,13 +14,14 @@ const leftStyle = {
 
 const rightStyle = {
     flex: 1,
+    textAlign: "left",
 };
 const sectionStyle = {
     //minHeight: "100vh",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    padding: "80px 5%",
+    ...Style,
     alignItems: "center",
     textAlign: "center",
     gap:"80px",
@@ -70,6 +71,7 @@ function Me(){
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
+
                 >
                     Skills<br />
                 </motion.h1>

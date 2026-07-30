@@ -12,6 +12,7 @@ import Project from "./Mainthing/Projectcard";
 import Heroo from "./Mainthing/Heroown";
 import Me from "./Mainthing/About";
 import Projects from "./Mainthing/Projects";
+import Contact from "./Mainthing/Contact";
 function App() {
   /*return (
     <motion.div
@@ -49,6 +50,7 @@ function App() {
         </div>
 
         <Me />
+        <Contact />
       </> 
   );
 }
