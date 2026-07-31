@@ -1,5 +1,5 @@
 import { easeOut, motion } from "framer-motion";
-import { Style } from "./Styles";
+//import { Style } from "./Styles";
 
 const item = {
   hidden: { opacity: 0, y: 40 },
