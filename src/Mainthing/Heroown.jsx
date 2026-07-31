@@ -1,5 +1,8 @@
 import {motion} from "framer-motion";
 import { Style } from "./Styles";
+import profile from "../assets/portfolio_pic.jpeg";
+import "./Hero.css";
+
 const containerVariants={
     hidden:{},
     visible:{
@@ -22,28 +25,44 @@ const itemVariantes={
 function Heroo({onSeeWork}){
     return(
         <motion.section
+        className="hero-section"
             variants={containerVariants}
             
             style={{
-                        height:"100vh",
-                        display:"flex",
-                        flexDirection:"column",
-                        justifyContent:"center",
+                        //height:"100vh",
+                        //display:"flex",
+                        //flexDirection:"column",
+                        //justifyContent:"center",
                         //padding: "2rem",
                         ...Style,
-                        gap: "24px",
+                        //gap: "24px",
                     }}
             initial="hidden"
             animate="visible"
         >
-            <motion.p variants={itemVariantes}>
-                Hello I'm Greeshma Divya Sree - Full Stack Developer
-            </motion.p>
-            <motion.h1 variants={itemVariantes}>
+            <div className="hero-content">
+            <div className="hero-intro">
+                    <motion.img
+                        src={profile}
+                        alt="Greeshma Divya Sree"
+                        className="hero-image"
+                        variants={itemVariantes}
+                    />
+                <motion.p variants={itemVariantes}>
+                    Hello, I'm Greeshma Divya Sree - Full Stack Developer
+                </motion.p>
+            </div>
+            <motion.h1 
+                className="hero-title"
+                variants={itemVariantes}
+            >
                  Curious mind. Creative imagination.<br />
                  Continuous learner, Building modern web experiences one idea at a time
             </motion.h1>
-            <motion.p variants={itemVariantes}> 
+            <motion.p 
+                className="hero-subtitle"
+                variants={itemVariantes}
+            > 
                 <b>CSE student. MERN certified. Creative by instinct.</b>
             </motion.p>
             <motion.button
@@ -79,6 +98,8 @@ function Heroo({onSeeWork}){
             > 
                  see my work
             </motion.button>
+        </div>
+        
             
         </motion.section>
     );

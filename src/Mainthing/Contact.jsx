@@ -36,6 +36,8 @@ function Contact(){
             {contacts.map((contact)=>(
                 <motion.a 
                     href={contact.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={contact.href}
                     style={{
                         textDecoration: "none",

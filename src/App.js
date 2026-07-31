@@ -7,8 +7,9 @@
 //import ScrollInView from "./practice/2/ScrollInView";
 //import ScrollTransform from "./practice/2/ScrollTransform";
 //import ParallaxSection from "./practice/2/Parallax";
+//import Project from "./Mainthing/Projectcard";
+
 import {useRef} from "react";
-import Project from "./Mainthing/Projectcard";
 import Heroo from "./Mainthing/Heroown";
 import Me from "./Mainthing/About";
 import Projects from "./Mainthing/Projects";

@@ -4,10 +4,6 @@ const container={
     hidden:{},
     visible:{
         transition:{
-            opacity:1,
-            y:0,
-            duration:0.7,
-            ease:"easeIn",
             delayChildren:0.5,
             staggerChildren:0.8,
         },

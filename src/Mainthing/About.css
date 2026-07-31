@@ -1,0 +1,17 @@
+.about-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+}
+.skills-container {
+    /* Nothing is needed here yet */
+}
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

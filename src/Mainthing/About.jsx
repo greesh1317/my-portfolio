@@ -1,5 +1,8 @@
 import {motion} from "framer-motion";
 import { Style } from "./Styles";
+import "./About.css";
+
+
 const skills = [
   "React",
   "Tailwind CSS",
@@ -18,13 +21,13 @@ const rightStyle = {
 };
 const sectionStyle = {
     //minHeight: "100vh",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
+    //display: "flex",
+    //flexDirection: "row",
+    //justifyContent: "center",
     ...Style,
-    alignItems: "center",
-    textAlign: "center",
-    gap:"80px",
+    //alignItems: "center",
+    //textAlign: "center",
+    //gap:"80px",
 };
 
 const skillsContainerStyle = {
@@ -44,7 +47,9 @@ const skillStyle = {
 function Me(){
     return(
         <motion.section
+            className="about-section"
             style={sectionStyle}
+            
         >
             <motion.div style={leftStyle}>
                 <motion.h1
@@ -65,7 +70,10 @@ function Me(){
                 </motion.p>
             </motion.div>
             
-            <motion.div style={rightStyle}>
+            <motion.div 
+                className="about-right"
+                style={rightStyle}
+            >
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -73,9 +81,12 @@ function Me(){
                     viewport={{ once: true }}
 
                 >
-                    Skills<br />
+                    Skills
                 </motion.h1>
-                <motion.div style={skillsContainerStyle}>
+                <motion.div 
+                    className="skills-container"
+                    style={skillsContainerStyle}
+                >
                     {skills.map((skill)=>(
                         <motion.span 
                             key={skill}
