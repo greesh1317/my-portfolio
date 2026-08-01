@@ -32,9 +32,9 @@ function Projects() {
       />
 
       <Project
-        title="Netflix Clone"
-        description="A Netflix landing page clone."
-        tags={["React", "Firebase", "Tailwind CSS"]}
+        title="MTODO – Task Management App"
+        description="A responsive task management app built with the MERN stack."
+        tags={["MongoDB ", "Node.js", "Tailwind CSS"]}
       />
     </section>
   );
